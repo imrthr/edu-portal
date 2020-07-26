@@ -1,0 +1,36 @@
+
+
+<div class="main-body">
+  <div class="container">
+    <div class="flex-form">
+    <div class="image"></div>
+    <div class="form-section">
+      <form class="form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <h4>Login Now</h4>
+        <label class="input-icons">
+          Email:
+          <br><i class="fa fa-user" aria-hidden="true"></i>
+          <input type="email" placeholder="email" formControlName="email" >
+        </label><br>
+        <div *ngIf="loginForm.controls['email'].invalid && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched || isInvalidForm)" class="alert alert-danger">
+          <div *ngIf="loginForm.controls['email'].errors.required" class="errors1"> email is required.</div>
+        </div>
+      <div class="gapbtwn"></div>
+        <label class="input-icons">
+          Password:
+          <br><i class="fa fa-key" aria-hidden="true"></i>
+          <input type="password" placeholder="Password" formControlName="Password" id="password">
+        </label><br>
+        <div *ngIf="loginForm.controls['Password'].invalid && (loginForm.controls['Password'].dirty || loginForm.controls['Password'].touched || isInvalidForm)" class="alert alert-danger">
+          <div *ngIf="loginForm.controls['Password'].errors.required" class="errors1">password is required.</div>
+        </div><br>
+        <button type="submit" class="submit" >Submit</button>
+        <p>Not signed up yet!  
+          <a routerLink="/sign-up" routerLinkActive="active">Sign Up</a>
+        </p>
+      
+      </form></div>
+    </div>
+  </div>
+</div>
+

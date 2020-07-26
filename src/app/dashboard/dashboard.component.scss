@@ -1,0 +1,18 @@
+.body{
+    background-color: whitesmoke;
+}
+
+table{
+    width: 100%;
+}
+table,td,th{
+    border: 1px solid;
+    border-collapse: collapse;
+    text-align: center;;
+}
+.tableDiv{
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    // box-shadow:  0 4px 8px 0 green, 0 6px 20px 0 yellow;
+}

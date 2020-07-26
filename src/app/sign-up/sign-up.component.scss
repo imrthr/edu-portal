@@ -1,0 +1,128 @@
+
+
+.form{
+    text-align: start;
+    margin-left: 14px;
+    color: white;
+    margin-top: -10px;
+    label{
+        font-size: 14px;
+    }
+    a{
+        color: red;
+        font-size: 12px;
+        margin-left: 2px;
+    }
+    p{
+        margin-left: 6px;
+        font-size: 11px;
+        position: absolute;
+        bottom: 0;
+    }
+    input[type=text] {
+        width: 70%;
+        margin-top: 4px;
+        padding: 5px 15px 5px 30px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      input[type=password] {
+        width: 70%;
+        margin-top: 4px;
+        padding: 5px 15px 5px 30px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      input[type=email]{
+        width: 70%;
+        margin-top: 4px;
+        padding: 5px 15px 5px 30px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      input[type=number]{
+        width: 70%;
+        margin-top: 4px;
+        padding: 5px 15px 5px 30px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    
+
+      }
+}
+.gapbtwn{
+    padding: 7px;
+}
+.submit{
+    margin-left: 0px;
+    width: 70%;
+    background-color: red;
+    font-size: 13px;
+    border: 0px solid;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+#password{
+    margin-left: 1px;
+
+}
+h4{
+    color: white;
+    margin-bottom: 16px;
+
+}
+.input-icons i { 
+    position: absolute; 
+    padding: 9px 2px 0px 8px;
+    color: red;
+}
+.t-c{
+    font-size: 10px;
+}
+.checkbox{
+    height: 9px;
+    width: 13px;
+    margin-left: -1px;
+}
+.h41{
+    padding-left:65px;
+    font-size: 12px;
+    margin-bottom: 6px;
+
+}
+// .social-icons img{
+//     height: 10px;
+// }
+.fb{
+    height: 17px;
+    margin-left: 42px
+}
+.twitter{
+    height: 18px;
+    margin-left: 15px;
+}
+.insta{   
+     height: 19px;
+     margin-left: 15px;
+}
+.linkedin{
+    height: 20px;
+    margin-left: 15px;
+}
+.errors{
+    font-size: 9px;
+    color: red;
+}
+
+
+
+
+ 

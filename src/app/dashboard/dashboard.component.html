@@ -1,0 +1,33 @@
+<div class="body">
+<p *ngIf='userInfo'>{{userInfo.createdDate | date:'dd MMMM, yyyy, h:mm:ss a'}}</p>
+
+
+ <div class="tableDiv"> 
+        <table>
+          <thead>
+          <tr>
+              <th>Name</th>
+              <th>Phone</th>
+              <th>Email</th>
+              <th>Action</th>
+          </tr>
+            </thead>
+            <tbody>
+          <tr *ngIf='userInfo'>
+            <td>{{userInfo.name}}</td>
+            <td>{{userInfo.phone}}</td>
+            <td>{{userInfo.email}}</td>
+            <td> 
+              <!-- <button (click)="onView(signUpFormData)" >view</button>
+              <button (click)="onEdit(signUpFormData)" >Edit</button>
+              <button (click)="onDelete(signUpFormData,i)" >Delete</button> -->
+            </td>
+          </tr>
+        
+        </tbody>
+      
+        </table>
+      </div> 
+      <app-admission-form></app-admission-form>
+    </div>
+

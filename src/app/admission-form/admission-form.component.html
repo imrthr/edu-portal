@@ -1,0 +1,490 @@
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+    <button type="button" class="close" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    
+
+  <form class="form" [formGroup]="admissionForm" (ngSubmit)="onSubmit()">
+<mat-card>
+  <p>Personal Information</p><br>
+        <div class="row">
+          <div class="col-3">
+            <mat-form-field >
+            <mat-label class="text">First Name</mat-label>
+            <input matInput formControlName="firstName">
+          </mat-form-field>
+          </div>
+
+          <div class="col-3">
+            <mat-form-field >
+            <mat-label >Middle Name</mat-label>
+            <input matInput formControlName="middleName">
+          </mat-form-field>
+        </div>
+      
+
+        <div class="col-3">
+          
+            <mat-form-field >
+            <mat-label>Last Name</mat-label>
+            <input matInput formControlName="lastName">
+          </mat-form-field>
+          </div>
+          <div class="col-3">
+            <mat-form-field>
+              <mat-label >Date of Birth</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="dob">
+                <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+           </mat-form-field> 
+           </div>
+           <div class="col-3">
+            <mat-form-field >
+            <mat-label>Age</mat-label>
+            <input matInput formControlName="age">
+          </mat-form-field>
+           </div>
+
+            <div class="col-3" class="textGdr">
+            <mat-label>Gender</mat-label>
+          <mat-radio-group formControlName="gender">
+            <mat-radio-button value="m" class="radio">Male</mat-radio-button>
+            <mat-radio-button value="f" class="radio">Female</mat-radio-button>
+            <mat-radio-button value="o" class="radio">Other</mat-radio-button>
+          </mat-radio-group>
+     </div> 
+     <div class="col-3">
+      <mat-form-field >
+       <mat-label>Blood Group</mat-label>
+       <mat-select formControlName="bg">
+         <mat-option value="o-">O-</mat-option>
+         <mat-option value="o+">O+</mat-option>
+         <mat-option value="a-">A-</mat-option>
+         <mat-option value="a+">A+</mat-option>
+         <mat-option value="b-">B-</mat-option>
+         <mat-option value="b+">B+</mat-option>
+         <mat-option value="ab-">AB-</mat-option>
+         <mat-option value="ab+">AB+</mat-option>
+       </mat-select>
+     </mat-form-field>
+     </div>
+
+<div class="col-3">
+            <mat-form-field >
+          <mat-label>Upload Img</mat-label>
+        <input matInput formControlName="uploadImage">
+           </mat-form-field><br>
+</div>
+
+<div class="col-3">
+            <mat-form-field >
+          <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email">
+           </mat-form-field><br>
+</div>
+
+<div class="col-3">
+            <mat-form-field >
+          <mat-label>Phone</mat-label>
+        <input matInput type="number" formControlName="phone">
+           </mat-form-field><br>
+</div>
+
+</div>
+</mat-card>
+
+
+<mat-card>
+  <p>Parents Imformation</p><br>
+  <div class="row">
+    <div class="col-3">
+             <mat-form-field>
+             <mat-label>Fathers Name</mat-label>
+             <input matInput formControlName="fatherName">
+             </mat-form-field>
+             </div>
+
+             <div class="col-3">
+             <mat-form-field >
+              <mat-label>Occupation</mat-label>
+              <mat-select formControlName="fOccupation">
+                <mat-option value="farmer">Farmer</mat-option>
+                <mat-option value="teacher">Teacher</mat-option>
+                <mat-option value="bussinesman">Bussiness Man</mat-option>
+                <mat-option value="social-worker">Social Worker</mat-option>
+              </mat-select>
+            </mat-form-field>
+            </div>
+
+            <div class="col-3">
+              <mat-form-field>
+                <mat-label >Date of Birth</mat-label>
+                  <input matInput [matDatepicker]="picker1" formControlName="fDob">
+                  <mat-datepicker-toggle matSuffix [for]="picker1" ></mat-datepicker-toggle>
+                  <mat-datepicker #picker1></mat-datepicker>
+             </mat-form-field> 
+             </div>
+
+             <div class="col-3">
+              <mat-form-field >
+              <mat-label>Age</mat-label>
+              <input matInput formControlName="fAge">
+            </mat-form-field>
+             </div>
+
+             <div class="col-3">
+              <mat-form-field>
+              <mat-label>Mother Name</mat-label>
+              <input matInput formControlName="motherName">
+              </mat-form-field>
+              </div>
+ 
+              <div class="col-3">
+                <mat-form-field >
+                 <mat-label>Occupation</mat-label>
+                 <mat-select formControlName="mOccupation">
+                   <mat-option value="farmer">House Wife</mat-option>
+                   <mat-option value="teacher">Teacher</mat-option>
+                   <mat-option value="bussinesman">Bussiness woman</mat-option>
+                   <mat-option value="social-worker">Social Worker</mat-option>
+                 </mat-select>
+               </mat-form-field>
+               </div>
+
+               <div class="col-3">
+                <mat-form-field>
+                  <mat-label >Date of Birth</mat-label>
+                    <input matInput [matDatepicker]="picker2" formControlName="mDob">
+                    <mat-datepicker-toggle matSuffix [for]="picker2" ></mat-datepicker-toggle>
+                    <mat-datepicker #picker2></mat-datepicker>
+               </mat-form-field> 
+               </div>
+ 
+              <div class="col-3">
+               <mat-form-field >
+               <mat-label>Age</mat-label>
+               <input matInput formControlName="mAge">
+             </mat-form-field>
+              </div>
+          </div>
+        </mat-card>
+
+        <mat-card>
+          <p>Contact Information</p><br>
+          <div class="row">
+          <div class="col-3">
+            <mat-form-field >
+              <mat-label>Current Address</mat-label>
+             <div class="textarea"> <textarea matInput formControlName="cAddress"></textarea></div>
+            </mat-form-field>
+          </div>
+
+          <div class="col-3">
+            <mat-form-field >
+            <mat-label>Landmark</mat-label>
+            <input matInput formControlName="cLandmark">
+          </mat-form-field>
+           </div>
+
+           <div class="col-3">
+            <mat-form-field >
+            <mat-label>Pin Code</mat-label>
+            <input matInput type="number" formControlName="cPin">
+          </mat-form-field>
+           </div>
+
+           <div class="col-3">
+            <mat-form-field >
+             <mat-label>State</mat-label>
+             <mat-select  formControlName="cState">
+               <mat-option value="andhra-pradesh">Andhra Pradesh</mat-option>
+               <mat-option value="arunachal-pradesh">Arunachal Pradesh</mat-option>
+               <mat-option value="assam">Assam</mat-option>
+               <mat-option value="bihar">Bihar</mat-option>
+               <mat-option value=">chhattisgarh">Chhattisgarh</mat-option>
+               <mat-option value="goa">Goa</mat-option>
+               <mat-option value="gujarat">Gujarat</mat-option>
+               <mat-option value="hariyana">Hariyana</mat-option>
+               <mat-option value="himachal-pradesh">Himachal Pradhesh</mat-option>	
+               <mat-option value="misoram">Misoram</mat-option>
+               <mat-option value="jammu-kashmir">Jammu & Kashmir</mat-option>
+               <mat-option value="jharkhand">Jharkhand</mat-option>
+               <mat-option value="karnataka">Karnataka</mat-option>
+               <mat-option value="kerala">Kerala</mat-option>
+               <mat-option value="madhya-pradesh">Madhya Pradhesh</mat-option>
+               <mat-option value="maharashtra">Maharashtra</mat-option>
+               <mat-option value="manipur">Manipur</mat-option>
+               <mat-option value="meghalaya">Meghalaya</mat-option>
+               <mat-option value="nagaland">Nagaland</mat-option>
+               <mat-option value="odisha">Odisha</mat-option>
+               <mat-option value="panjab">Panjab</mat-option>
+               <mat-option value="rajasthan">Rajasthan</mat-option>
+               <mat-option value="sikkim">Sikkim</mat-option>
+               <mat-option value="tamil-nadu">Tamil Nadu</mat-option>
+               <mat-option value="tripura">Tripura</mat-option>
+               <mat-option value="telangana">Telangana</mat-option>
+               <mat-option value="uttar-pradesh">Uttar Pradhesh</mat-option>
+               <mat-option value="uttarakhand">Uttarakhand</mat-option>
+               <mat-option value="west-bengal">West Bengal</mat-option>
+             </mat-select>
+           </mat-form-field>
+           </div>
+
+           <div class="col-3">
+            <mat-form-field >
+            <mat-label>City</mat-label>
+            <input matInput formControlName="cCity">
+          </mat-form-field>
+           </div>
+
+           <div class="col-3">
+            <mat-form-field >
+            <mat-label>Distric</mat-label>
+            <input matInput formControlName="cDistric">
+          </mat-form-field>
+           </div>
+          </div><br><br>
+
+          <div class="row">
+           <div class="col-3">
+            <mat-form-field >
+              <mat-label>Parmanent Address</mat-label>
+             <div class="textarea"> <textarea matInput formControlName="pAddress"></textarea></div>
+            </mat-form-field>
+          </div>
+
+          <div class="col-3">
+            <mat-form-field >
+            <mat-label>Landmark</mat-label>
+            <input matInput formControlName="pLandmark">
+          </mat-form-field>
+           </div>
+
+           <div class="col-3">
+            <mat-form-field >
+            <mat-label>Pin Code</mat-label>
+            <input matInput type="number" formControlName="pPin">
+          </mat-form-field>
+           </div>
+
+           <div class="col-3">
+            <mat-form-field >
+             <mat-label>State</mat-label>
+             <mat-select formControlName="pState">
+               <mat-option value="andhra-pradesh">Andhra Pradesh</mat-option>
+               <mat-option value="arunachal-pradesh">Arunachal Pradesh</mat-option>
+               <mat-option value="assam">Assam</mat-option>
+               <mat-option value="bihar">Bihar</mat-option>
+               <mat-option value=">chhattisgarh">Chhattisgarh</mat-option>
+               <mat-option value="goa">Goa</mat-option>
+               <mat-option value="gujarat">Gujarat</mat-option>
+               <mat-option value="hariyana">Hariyana</mat-option>
+               <mat-option value="himachal-pradesh">Himachal Pradhesh</mat-option>	
+               <mat-option value="misoram">Misoram</mat-option>
+               <mat-option value="jammu-kashmir">Jammu & Kashmir</mat-option>
+               <mat-option value="jharkhand">Jharkhand</mat-option>
+               <mat-option value="karnataka">Karnataka</mat-option>
+               <mat-option value="kerala">Kerala</mat-option>
+               <mat-option value="madhya-pradesh">Madhya Pradhesh</mat-option>
+               <mat-option value="maharashtra">Maharashtra</mat-option>
+               <mat-option value="manipur">Manipur</mat-option>
+               <mat-option value="meghalaya">Meghalaya</mat-option>
+               <mat-option value="nagaland">Nagaland</mat-option>
+               <mat-option value="odisha">Odisha</mat-option>
+               <mat-option value="panjab">Panjab</mat-option>
+               <mat-option value="rajasthan">Rajasthan</mat-option>
+               <mat-option value="sikkim">Sikkim</mat-option>
+               <mat-option value="tamil-nadu">Tamil Nadu</mat-option>
+               <mat-option value="tripura">Tripura</mat-option>
+               <mat-option value="telangana">Telangana</mat-option>
+               <mat-option value="uttar-pradesh">Uttar Pradhesh</mat-option>
+               <mat-option value="uttarakhand">Uttarakhand</mat-option>
+               <mat-option value="west-bengal">West Bengal</mat-option>
+             </mat-select>
+           </mat-form-field>
+           </div>
+
+           <div class="col-3">
+            <mat-form-field >
+            <mat-label>City</mat-label>
+            <input matInput formControlName="pCity">
+          </mat-form-field>
+           </div>
+
+           <div class="col-3">
+            <mat-form-field >
+            <mat-label>Distric</mat-label>
+            <input matInput formControlName="pDistric">
+          </mat-form-field>
+           </div>
+          </div>
+        </mat-card>
+
+        <mat-card>
+           <p>Education</p>
+           <br>
+           <div class="row">
+
+            <div class="col-3">
+              <mat-form-field >
+               <mat-label>Qualification</mat-label>
+               <mat-select formControlName="qualification">
+                 <mat-option value="10th">10th</mat-option>
+                 <mat-option value="12th">12th</mat-option>
+                 <mat-option value="ba">B.A.</mat-option>
+                 <mat-option value="be">B.E.</mat-option>
+                 <mat-option value="b-tech">B.TECH</mat-option>
+                 <mat-option value="bca">B.C.A.</mat-option>
+                 <mat-option value="m-tech">M.TECH</mat-option>
+                 <mat-option value="mca">M.C.A.</mat-option>
+                 <mat-option value="mba">M.B.A.</mat-option>
+                 <mat-option value="bba">B.B.A.</mat-option>
+                 <mat-option value="bsc">B.SC.</mat-option>
+               </mat-select>
+             </mat-form-field>
+             </div>
+
+             <div class="col-3">
+              <mat-form-field>
+                <mat-label >Passing Year</mat-label>
+                  <input matInput [matDatepicker]="picker3" formControlName="passingYear">
+                  <mat-datepicker-toggle matSuffix [for]="picker3" ></mat-datepicker-toggle>
+                  <mat-datepicker #picker3></mat-datepicker>
+             </mat-form-field> 
+             </div>
+
+             <div class="col-3">
+              <mat-form-field >
+               <mat-label>University/College/School</mat-label>
+               <mat-select  formControlName="qualificationUSC">
+                 <mat-option value="du">Delhi University</mat-option>
+                 <mat-option value="rgpv">Rajiv Gandhi Proudyogiki Vishwavidyalaya</mat-option>
+                 <mat-option value="lbsh">Lal Bahadur Sastri High School</mat-option>
+               </mat-select>
+             </mat-form-field>
+             </div>
+
+             <div class="col-3">
+              <mat-form-field >
+              <mat-label>Percent/CGPA/Grade</mat-label>
+              <input matInput formControlName="percent">
+            </mat-form-field>
+             </div>
+             
+             <div class="col-3">
+              <mat-form-field >
+              <mat-label>Upload Marksheet/Certificate</mat-label>
+              <input matInput formControlName="uploadMarksheet">
+            </mat-form-field>
+             </div>
+            </div>
+        </mat-card>
+
+        <mat-card>
+          <p>Program</p>
+          <br>
+          <div class="row">
+            <div class="col-3">
+              <mat-form-field >
+               <mat-label>Program/Course</mat-label>
+               <mat-select formControlName="course" >
+                 <mat-option value="java">Java</mat-option>
+                 <mat-option value="javascript">Java Script</mat-option>
+                 <mat-option value="angular">Angular</mat-option>
+               </mat-select>
+             </mat-form-field>
+             </div>
+             <div class="col-3">
+              <mat-form-field >
+               <mat-label>University/College/School</mat-label>
+               <mat-select  formControlName="courseUCS">
+                 <mat-option value="du">Delhi University</mat-option>
+                 <mat-option value="rgpv">Rajiv Gandhi Proudyogiki Vishwavidyalaya</mat-option>
+                 <mat-option value="lbsh">Lal Bahadur Sastri High School</mat-option>
+               </mat-select>
+             </mat-form-field>
+             </div>
+             <div class="col-3">
+              <mat-form-field >
+               <mat-label>Payment Type</mat-label>
+               <mat-select  formControlName="paymentType">
+                 <mat-option value="monthly">Monthly</mat-option>
+                 <mat-option value="quaterly">Quaterly</mat-option>
+                 <mat-option value="half-yearly">Half Yearly</mat-option>
+                 <mat-option value="yearly">Yearly</mat-option>
+               </mat-select>
+             </mat-form-field>
+             </div>
+             <div class="col-3">
+              <mat-form-field >
+               <mat-label>Payment Method</mat-label>
+               <mat-select formControlName="paymentMethod">
+                 <mat-option value="net-banking">Net Banking</mat-option>
+                 <mat-option value="bhim-upi">BHIM/UPI</mat-option>
+                 <mat-option value="debit-card">Debit Card</mat-option>
+                 <mat-option value="credit-card">Credit Card</mat-option>
+               </mat-select>
+             </mat-form-field>
+             </div>
+        </div>
+        </mat-card>
+
+        <mat-card>
+          <p>KYC</p>
+          <br>
+          <div class="row">
+            <div class="col-3">
+              <mat-form-field >
+              <mat-label>Id Proof</mat-label>
+              <mat-select  formControlName="idProof">
+                <mat-option value="adhaar-card">Adhaar-Card</mat-option>
+                <mat-option value="pan-card">Pan-Card</mat-option>
+                <mat-option value="drivering-liecence">Drivering-Liecence</mat-option>
+                <mat-option value="passport">Passport</mat-option>
+              </mat-select>
+            </mat-form-field>
+             </div>
+             <div class="col-3">
+              <mat-form-field >
+              <mat-label>Address Proof</mat-label>
+              <mat-select formControlName="addressProof">
+                <mat-option value="adhaar-card">Adhaar-Card</mat-option>
+                <mat-option value="passport">Passport</mat-option>
+              </mat-select>
+            </mat-form-field>
+             </div>
+             <div class="col-3">
+              <mat-form-field >
+              <mat-label>Upload Image</mat-label>
+              <input matInput formControlName="uploadImg">
+            </mat-form-field>
+             </div>
+
+        </div>
+        </mat-card>
+        <div class="subm">
+        <button type="submit" class="submit" >Submit</button>
+      </div><br>
+      </form>
+
+
+
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark">Save</button>
+    </div>
+  </ng-template>
+  
+  <button class="btn btn-lg btn-outline-primary" (click)="openModal(content)">Launch demo modal</button>
+  
+
+  
+          
+           
+
+   

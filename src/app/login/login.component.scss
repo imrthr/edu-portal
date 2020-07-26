@@ -1,0 +1,70 @@
+
+
+.form{
+    text-align: start;
+    margin-left: 14px;
+    margin-top: 38%;
+    color: white;
+    label{
+        font-size: 14px;
+    }
+    a{
+        color: red;
+        font-size: 12px;
+        margin-left: 2px;
+    }
+    p{
+        margin-left: 6px;
+        font-size: 11px;
+        position: absolute;
+        bottom: 0;
+    }
+    input[type=email] {
+        width: 70%;
+        margin-top: 4px;
+        padding: 5px 15px 5px 30px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      input[type=password] {
+        width: 70%;
+        margin-top: 4px;
+        padding: 5px 15px 5px 30px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+}
+.gapbtwn{
+    padding: 7px;
+}
+.submit{
+    margin-left: 1px;
+    width: 70%;
+    background-color: red;
+    font-size: 13px;
+    border: 0px solid;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+#password{
+    margin-left: 1px;
+
+}
+h4{
+    color: white;
+}
+.input-icons i { 
+    position: absolute; 
+    padding: 9px 2px 0px 8px;
+    color: red;
+}
+.errors1{
+    font-size: 9px;
+    color: red;
+}
+
+ 

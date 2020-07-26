@@ -1,0 +1,90 @@
+
+<div class="main-body">
+  <div class="container">
+    <div class="flex-form">
+    <div class="image">
+    </div>
+    <div class="form-section">
+      <form class="form" [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+        <h4>Signup Now</h4>
+        <label class="input-icons">
+          Name:
+          <br><i class="fa fa-user" aria-hidden="true"></i>
+          <input type="text" placeholder="Name" formControlName="name">
+        </label><br>
+
+        <div *ngIf="signUpForm.controls['name'].invalid && (signUpForm.controls['name'].dirty || signUpForm.controls['name'].touched || isInvalidForm)" class="alert alert-danger">
+          <div *ngIf="signUpForm.controls['name'].errors.required" class="errors">
+          Name is required.
+        </div>
+          </div>
+      <div class="gapbtwn"></div>
+        <label class="input-icons">
+          Phone:
+          <br><i class="fa fa-phone-square" aria-hidden="true"></i> 
+          <input type="number" placeholder="Phone" formControlName="phone">
+        </label><br>
+        <div *ngIf="signUpForm.controls['phone'].invalid && (signUpForm.controls['phone'].dirty || signUpForm.controls['phone'].touched || isInvalidForm)" class="alert alert-danger">
+          <div *ngIf="signUpForm.controls['phone'].errors.required" class="errors">
+          phone is required.
+        </div>
+          </div>
+
+        <div class="gapbtwn"></div>
+        <label class="input-icons">
+          Email:
+          <br>
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <input type="email" placeholder="Email" formControlName="email" >
+        </label><br>
+        <div *ngIf="signUpForm.controls['email'].invalid && (signUpForm.controls['email'].dirty || signUpForm.controls['email'].touched || isInvalidForm)" class="alert alert-danger">
+          <div *ngIf="signUpForm.controls['email'].errors.required" class="errors">
+          email is required.
+        </div>
+          </div>
+
+        <div class="gapbtwn"></div>
+        <label class="input-icons">
+          Password:
+          <br><i class="fa fa-key" aria-hidden="true"></i>
+          <input type="password" placeholder="Password" formControlName="password" >
+        </label><br>
+        <div *ngIf="signUpForm.controls['password'].invalid && (signUpForm.controls['password'].dirty || signUpForm.controls['password'].touched || isInvalidForm)" class="alert alert-danger">
+          <div *ngIf="signUpForm.controls['password'].errors.required" class="errors">
+          password is required.
+        </div>
+        </div>
+
+        <div class="gapbtwn"></div>
+        <label class="input-icons">
+          Confirm Password:
+          <br><i class="fa fa-key" aria-hidden="true"></i>
+          <input type="password" placeholder="Confirm Password" formControlName="confirmPassword" >
+        </label><br>
+        <div *ngIf="signUpForm.controls['confirmPassword'].invalid && (signUpForm.controls['confirmPassword'].dirty || signUpForm.controls['confirmPassword'].touched || isInvalidForm)" class="alert alert-danger">
+          <div *ngIf="signUpForm.controls['confirmPassword'].errors.required" class="errors">
+          confirm password is required.
+      </div>
+      </div>
+      <div *ngIf="isMatchedPassword"  class="errors">{{passwordErrorMsg }}</div>
+
+
+        <span class="t-c">
+          <input type="checkbox" class="checkbox">
+          I Accept To the Term & Conditions
+        </span><br><br>
+        <button type="submit" class="submit" >Submit</button>
+        <h4 class="h41">or login with</h4>
+        <!-- <span class="social-icons"> -->
+        <img src="assets/images/fb.png" class="fb">
+        <img src="assets/images/twitter.png" class="twitter">
+        <img src="assets/images/instra.png" class="insta">
+        <img src="assets/images/linkedin.png" class="linkedin">
+      <!-- </span> -->
+      </form>
+    </div>
+    </div>
+    </div>
+  </div>
+
+
